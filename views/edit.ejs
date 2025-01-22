@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details Of File</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-zinc-900 text-white">
+
+    <div class="container mx-auto p-10">
+        <!-- Go Back Link -->
+        <a href="/" class="text-blue-500 inline-block mb-10">Go back to Home</a>
+
+        <!-- Form to Update File Name -->
+        <form action="/edit" method="POST" class="space-y-6 max-w-xl mx-auto">
+            <div>
+                <label for="prev" class="block text-xl font-medium">Previous Name</label>
+                <input class="block w-full rounded-md outline-none px-5 py-2 text-zinc-600 bg-zinc-800 text-white" type="text"
+                    name="prev" value="<%= filename %>" readonly>
+            </div>
+
+            <div>
+                <label for="new" class="block text-xl font-medium">New Name</label>
+                <input class="block w-full rounded-md outline-none px-5 py-2 bg-zinc-800 text-white" type="text"
+                    name="new" placeholder="Enter new file name" required>
+            </div>
+
+            <div>
+                <input class="w-full bg-yellow-600 px-5 py-2 rounded-md text-white cursor-pointer" type="submit"
+                    value="Update Name">
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
